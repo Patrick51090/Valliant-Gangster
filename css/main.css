@@ -1,0 +1,158 @@
+
+::-webkit-scrollbar {
+	display: none;
+}
+
+body {
+	background-color: #ffffff;
+	padding: 0px;
+	margin: 0px;
+	font-family: "Segoe UI", Arial;
+	font-size: 14pt;
+	font-weight: lighter;
+}
+
+button {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+	outline: none;
+}
+
+.g-profile {
+	width: 40px;
+	height: 40px;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	border-radius: 100%;
+	margin-top: 5px;
+	border: 2px solid #ffffff;
+}
+
+.navbar-brand {
+	font-family: Arial Black;
+	font-size: 16pt;
+}
+
+.color-orange {
+	color: orange;
+}
+
+.navbar .container-fluid .pull-right button {
+	margin-top: 5px;
+}
+
+.jumbotron-1 {
+	background-color: rgb(0, 175, 200);
+	background: -webkit-linear-gradient(45deg, rgb(0, 175, 200), rgb(0, 200, 175));
+	background: linear-gradient(45deg, rgb(0, 175, 200), rgb(0, 200, 175));
+	text-align: center;
+	color: #ffffff;
+	box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
+	height: 400px;
+	margin-top: -20px;
+}
+
+.jumbotron-1 h1 {
+	font-family: 'Carter One', cursive;
+	font-size: 48pt;
+}
+
+.jumbotron-1 p {
+	font-family: 'Joti One', cursive;
+	font-size: 14pt;
+	font-weight: bold;
+}
+
+.g-signin2 {
+	margin-top: 5px;
+	margin-right: 100px;
+}
+
+.jumbotron-2 {
+	background-color: rgb(0, 175, 200);
+	background: -webkit-linear-gradient(45deg, rgb(200, 200, 200), rgb(255, 255, 255), rgb(180, 180, 180));
+	background: linear-gradient(45deg, rgb(200, 200, 200), rgb(255, 255, 255), rgb(180, 180, 180));
+	text-align: center;
+	color: #222222;
+	border-radius: 10px;
+	width: 90%;
+	height: 300px;
+}
+
+.jumbotron-2 h1 {
+	font-family: Oxygen;
+	font-size: 48pt;
+}
+
+
+.container {
+	border-radius: 5px;
+	min-height: 300px;
+}
+
+
+.container h2 {
+	margin-bottom: 20px;
+}
+
+.section h2 {
+	font-weight: normal;
+}
+
+.panel {
+	font-family: "Oxygen";
+	font-weight: lighter;
+}
+
+.panel .panel-body h4 {
+	font-weight: bold;
+}
+
+.panel-dark {
+	background-color: #333333;
+	color: #ffffff;
+}
+
+
+.panel-dark .panel-footer {
+	border-top: none;
+	background-color: #555555;
+}
+
+.table {
+	border-width: 2px;
+}
+
+
+.profile-panel {
+	width: 600px;
+	height: auto;
+	min-height: 400px;
+	background-color: #f9f9f9;
+	border-radius: 5px;
+	box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.3);
+	margin: auto;
+}
+
+.profile-big-icon {
+	width: 128px;
+	height: 128px;
+	border-radius: 100%;
+	background-size: 100% 100%;
+	border: 5px solid #ffffff;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.profile-name {
+	font-size: 12pt;
+	font-family: Arial;
+	color: #444444;
+}
+
+canvas {
+    display: block;
+    margin: auto;
+}
