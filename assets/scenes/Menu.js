@@ -19,8 +19,8 @@ class MenuScene extends Phaser.Scene {
 
 
         this.title = {};
-        //this.title.bg = this.add.sprite(400, 300, 'img-title-bg').setOrigin(0.5);
-        //this.title.bg.setPipeline('Light2D');
+        this.title.bg = this.add.sprite(400, 300, 'img-bg-city01').setOrigin(0.5);
+        this.title.bg.setPipeline('Light2D');
 
 
         this.title.label = this.add.bitmapText(400, 100, 'fnt-pixel', "Valiant Gangster", 56).setOrigin(0.5);
@@ -121,23 +121,11 @@ class MenuScene extends Phaser.Scene {
 
         this.name_label = this.add.bitmapText(200, 200, "fnt-pixel", "Enter your name:", 16);
 
-        this.name_field = this.add.sprite(400, 250, 'img-text-field-large-none').setOrigin(0.5).setInteractive();
-        this.name_field.label = this.add.bitmapText(220, 230, 'fnt-pixel', "", 32);
-        this.name_field.label.tint = 0x000000;
-        this.name_field.typing = false;
-
-        this.name_field.on('pointerdown', function() {
-            this.name_field.setTexture('img-text-field-large-active');
-            this.name_field.typing = true;
-        }, this);
+        this.name_field = new TextField(400, 300, 300, 150, ["img-text-field-large-none", 'img-text-field-large-active'], this);
 
 
 
 
-        this.input.on('pointerdown', function() {
-            this.name_field.setTexture('img-text-field-large-none');
-            this.name_field.typing = false;
-        }, this);
 
 
 
@@ -146,6 +134,6 @@ class MenuScene extends Phaser.Scene {
 
 
     update() {
-
+        this.name_field.update();
     }
 }

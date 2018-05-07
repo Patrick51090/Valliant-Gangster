@@ -14,6 +14,8 @@ class PreloadScene extends Phaser.Scene {
 
 
         //Images
+        this.load.image('img-bg-city01', ['assets/images/backgrounds/city01.png', 'assets/images/backgrounds/city01.png']);
+
         this.load.image('img-btn1-none', 'assets/images/btn1-none.png');
         this.load.image('img-btn1-hover', 'assets/images/btn1-hover.png');
         this.load.image('img-btn2-none', 'assets/images/btn2-none.png');
@@ -43,6 +45,15 @@ class PreloadScene extends Phaser.Scene {
 
 
         this.load.audio('track-loop1', 'assets/audio/music/loop1.ogg');
+
+
+
+
+
+
+
+        //Scripts
+        this.load.script('js-text-field', 'assets/scripts/TextField.js');
 
 
 
