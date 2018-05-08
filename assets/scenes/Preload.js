@@ -26,6 +26,8 @@ class PreloadScene extends Phaser.Scene {
         this.load.image('img-text-field-large-none', 'assets/images/text-field-large-none.png');
         this.load.image('img-text-field-large-active', 'assets/images/text-field-large-active.png');
 
+        this.load.image('img-tiles', 'assets/images/tiles.png');
+
 
 
 
@@ -64,6 +66,13 @@ class PreloadScene extends Phaser.Scene {
         //Fonts (.png & .fnt)
 		this.load.bitmapFont('fnt-pixel', 'assets/fonts/font.png', 'assets/fonts/font.fnt');
 
+
+
+
+
+
+        //Data
+        this.load.json('maps-main-world', 'assets/data/maps/main-world2.json');
 
     }
 

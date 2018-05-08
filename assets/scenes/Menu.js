@@ -119,9 +119,6 @@ class MenuScene extends Phaser.Scene {
 
 
 
-        this.name_label = this.add.bitmapText(200, 200, "fnt-pixel", "Enter your name:", 16);
-
-        this.name_field = new TextField(400, 300, 300, 150, ["img-text-field-large-none", 'img-text-field-large-active'], this);
 
 
 
@@ -134,6 +131,5 @@ class MenuScene extends Phaser.Scene {
 
 
     update() {
-        this.name_field.update();
     }
 }
