@@ -14,7 +14,7 @@ class PreloadScene extends Phaser.Scene {
 
 
         //Images
-        this.load.image('img-bg-city01', ['assets/images/backgrounds/city01.png', 'assets/images/backgrounds/city01.png']);
+        this.load.image('img-bg-menu', ['assets/images/backgrounds/menu-bg.png', 'assets/images/backgrounds/menu-bg.png']);
 
         this.load.image('img-btn1-none', 'assets/images/btn1-none.png');
         this.load.image('img-btn1-hover', 'assets/images/btn1-hover.png');
@@ -26,7 +26,7 @@ class PreloadScene extends Phaser.Scene {
         this.load.image('img-text-field-large-none', 'assets/images/text-field-large-none.png');
         this.load.image('img-text-field-large-active', 'assets/images/text-field-large-active.png');
 
-        this.load.image('img-tiles', 'assets/images/tiles.png');
+        this.load.image('img-ground_tiles', 'assets/images/ground_tiles.png');
 
 
 
@@ -72,7 +72,7 @@ class PreloadScene extends Phaser.Scene {
 
 
         //Data
-        this.load.json('maps-main-world', 'assets/data/maps/main-world2.json');
+        this.load.tilemapTiledJSON('maps-main-world', 'assets/data/maps/main_world.json');
 
     }
 

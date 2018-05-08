@@ -19,20 +19,10 @@ class MenuScene extends Phaser.Scene {
 
 
         this.title = {};
-        this.title.bg = this.add.sprite(400, 300, 'img-bg-city01').setOrigin(0.5);
-        this.title.bg.setPipeline('Light2D');
+        this.title.bg = this.add.sprite(400, 300, 'img-bg-menu').setOrigin(0.5);
 
 
-        this.title.label = this.add.bitmapText(400, 100, 'fnt-pixel', "Valiant Gangster", 56).setOrigin(0.5);
-
-
-
-
-
-
-
-        this.title_light = this.lights.addLight(300, 600, 500).setIntensity(2);;
-        this.lights.enable().setAmbientColor(0x555555);
+        this.title.label = this.add.bitmapText(400, 100, 'fnt-pixel', "Valiant Wizard", 56).setOrigin(0.5);
 
 
 

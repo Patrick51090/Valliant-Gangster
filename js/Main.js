@@ -8,7 +8,7 @@ var GameData = {};
 //Configures the game when created
 var gameConfig = {
 	type: Phaser.WEBGL,
-	title: "Valiant Gangster",
+	title: "Valiant Wizard",
 	version: '0.0.1',
 	parent: 'game-area',
 	transparent: false,
