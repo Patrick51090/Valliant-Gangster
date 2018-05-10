@@ -14,19 +14,51 @@ class PlayerMovement {
     update() {
         this.scene.player.body.setVelocity(0);
 
-        if (this.controls.up.isDown) {
-            this.scene.player.anims.play('player.walk.up', true);
+
+        if (this.controls.up.isDown && this.controls.down.isUp && this.controls.left.isDown && this.controls.right.isUp) {
+            this.scene.player.anims.play('player.walk.left', true);
             this.scene.player.body.y -= 2;
-        }else if (this.controls.down.isDown) {
-            this.scene.player.anims.play('player.walk.down', true);
-            this.scene.player.body.y += 2;
-        }else if (this.controls.left.isDown) {
+            this.scene.player.body.x -= 2;
+        }
+
+        if (this.controls.up.isDown && this.controls.down.isUp && this.controls.left.isUp && this.controls.right.isDown) {
+            this.scene.player.anims.play('player.walk.right', true);
+            this.scene.player.body.y -= 2;
+            this.scene.player.body.x += 2;
+        }
+
+        if (this.controls.up.isUp && this.controls.down.isDown && this.controls.left.isDown && this.controls.right.isUp) {
             this.scene.player.anims.play('player.walk.left', true);
             this.scene.player.body.x -= 2;
-        }else if (this.controls.right.isDown) {
+            this.scene.player.body.y += 2;
+        }
+
+        if (this.controls.up.isUp && this.controls.down.isDown && this.controls.left.isUp && this.controls.right.isDown) {
+            this.scene.player.anims.play('player.walk.right', true);
+            this.scene.player.body.x += 2;
+            this.scene.player.body.y += 2;
+        }
+
+        if (this.controls.up.isDown && this.controls.down.isUp && this.controls.left.isUp && this.controls.right.isUp) {
+            this.scene.player.anims.play('player.walk.up', true);
+            this.scene.player.body.y -= 2;
+        }
+
+        if (this.controls.up.isUp && this.controls.down.isDown && this.controls.left.isUp && this.controls.right.isUp) {
+            this.scene.player.anims.play('player.walk.down', true);
+            this.scene.player.body.y += 2;
+        }
+
+        if (this.controls.up.isUp && this.controls.down.isUp && this.controls.left.isDown && this.controls.right.isUp) {
+            this.scene.player.anims.play('player.walk.left', true);
+            this.scene.player.body.x -= 2;
+        }
+
+        if (this.controls.up.isUp && this.controls.down.isUp && this.controls.left.isUp && this.controls.right.isDown) {
             this.scene.player.anims.play('player.walk.right', true);
             this.scene.player.body.x += 2;
         }
+
 
 
         if (this.controls.up.isUp && this.controls.down.isUp && this.controls.left.isUp && this.controls.right.isUp) {

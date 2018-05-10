@@ -25,7 +25,6 @@ class MainWorldScene extends Phaser.Scene {
         this.map_layer1 = this.map.createStaticLayer('Ground', this.map_tiles, 0, 0);
         this.map_layer2 = this.map.createStaticLayer('Paths', this.map_tiles, 0, 0);
 
-        this.cameras.main.setZoom(4);
         this.cameras.main.setBounds(0, 0, this.map.widthInPixels, this.map.heightInPixels);
         this.physics.world.setBounds(0, 0, this.map.widthInPixels, this.map.heightInPixels);
 
