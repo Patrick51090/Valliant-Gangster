@@ -1,9 +1,7 @@
 
 class PlayerMovement {
-    constructor(scene, player) {
+    constructor(scene) {
         this.scene = scene;
-
-        this.player = player;
 
         this.controls = {
             up: this.scene.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.W),
@@ -14,25 +12,25 @@ class PlayerMovement {
     }
 
     update() {
-        this.player.body.setVelocity(0);
+        this.scene.player.body.setVelocity(0);
 
         if (this.controls.up.isDown) {
-            this.player.anims.play('player.walk.up', true);
-            this.player.body.velocity.y = -100;
+            this.scene.player.anims.play('player.walk.up', true);
+            this.scene.player.body.y -= 2;
         }else if (this.controls.down.isDown) {
-            this.player.anims.play('player.walk.down', true);
-            this.player.body.velocity.y = 100;
+            this.scene.player.anims.play('player.walk.down', true);
+            this.scene.player.body.y += 2;
         }else if (this.controls.left.isDown) {
-            this.player.anims.play('player.walk.left', true);
-            this.player.body.velocity.x = -100;
+            this.scene.player.anims.play('player.walk.left', true);
+            this.scene.player.body.x -= 2;
         }else if (this.controls.right.isDown) {
-            this.player.anims.play('player.walk.right', true);
-            this.player.body.velocity.x = 100;
+            this.scene.player.anims.play('player.walk.right', true);
+            this.scene.player.body.x += 2;
         }
 
 
         if (this.controls.up.isUp && this.controls.down.isUp && this.controls.left.isUp && this.controls.right.isUp) {
-            this.player.anims.stop();
+            this.scene.player.anims.stop();
         }
     }
 

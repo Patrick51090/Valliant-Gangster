@@ -48,11 +48,11 @@ class MenuScene extends Phaser.Scene {
         this.btn1.on('pointerdown', function() {
             this.btn1.setTexture('img-btn1-hover');
 
-            let btn_click_snd = this.sound.add('sfx-click-action-00');
+            var btn_click_snd = this.sound.add('sfx-click-action-00');
 			btn_click_snd.volume = 1;
 			btn_click_snd.play();
 
-			let tween1 = this.tweens.add({
+			var tween1 = this.tweens.add({
 				targets: this.bg_music,
 				volume: 0,
 				duration: 750,
@@ -89,11 +89,11 @@ class MenuScene extends Phaser.Scene {
         this.btn2.on('pointerdown', function() {
             this.btn2.setTexture('img-btn2-hover');
 
-            let btn_click_snd = this.sound.add('sfx-click-action-00');
+            var btn_click_snd = this.sound.add('sfx-click-action-00');
 			btn_click_snd.volume = 1;
 			btn_click_snd.play();
 
-			let tween1 = this.tweens.add({
+			var tween1 = this.tweens.add({
 				targets: this.bg_music,
 				volume: 0,
 				duration: 750,

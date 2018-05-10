@@ -2,7 +2,7 @@
 
 
 //Where all the game's data is stored
-var GameData = {};
+var GameData;
 
 
 //Configures the game when created
@@ -18,7 +18,7 @@ var gameConfig = {
 	physics: {
 		default: 'arcade',
 		arcade: {
-			debug: false
+			debug: true
 		}
 	},
 	scene: [

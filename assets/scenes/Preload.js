@@ -42,15 +42,16 @@ class PreloadScene extends Phaser.Scene {
 		this.load.audio('sfx-click-action-01', 'assets/audio/sfx/click-action-01.mp3');
 		this.load.audio('sfx-click-action-02', 'assets/audio/sfx/click-action-02.mp3');
 
-		this.load.audio('sfx-footstep-grass', 'assets/audio/sfx/footsteps/leaves01.ogg');
-		this.load.audio('sfx-footstep-stone', 'assets/audio/sfx/footsteps/wood01.ogg');
-		this.load.audio('sfx-footstep-wood', 'assets/audio/sfx/footsteps/wood01.ogg');
-		this.load.audio('sfx-footstep-sand', 'assets/audio/sfx/footsteps/mud02.ogg');
+		this.load.audio('sfx-fs-grass', 'assets/audio/sfx/footsteps/leaves01.ogg');
+		this.load.audio('sfx-fs-stone', 'assets/audio/sfx/footsteps/wood01.ogg');
+		this.load.audio('sfx-fs-wood', 'assets/audio/sfx/footsteps/wood01.ogg');
+		this.load.audio('sfx-fs-sand', 'assets/audio/sfx/footsteps/mud02.ogg');
 
 		this.load.audio('sfx-explosion', 'assets/audio/sfx/explosion.wav');
 
 
         this.load.audio('track-loop1', 'assets/audio/music/loop1.ogg');
+        this.load.audio('track-loop2', 'assets/audio/music/loop2.mp3');
 
 
 
@@ -59,8 +60,9 @@ class PreloadScene extends Phaser.Scene {
 
 
         //Scripts
-        this.load.script('js-player-animations', 'assets/scripts/PlayerAnimations.js');
+        this.load.script('js-animations', 'assets/scripts/Animations.js');
         this.load.script('js-player-movement', 'assets/scripts/PlayerMovement.js');
+        this.load.script('js-footstep-audio', 'assets/scripts/FootstepAudio.js');
 
 
 
@@ -76,12 +78,16 @@ class PreloadScene extends Phaser.Scene {
 
 
         //Data
+        this.load.json('json-game-data', 'assets/data/GameData.json');
+
         this.load.tilemapTiledJSON('maps-main-world', 'assets/data/maps/main_world.json');
 
     }
 
 
     create() {
+
+        GameData = this.cache.json.get('json-game-data');
 
         if (gameConfig.physics.arcade.debug) {
             this.scene.start('MainWorld');

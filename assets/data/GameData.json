@@ -1,0 +1,14 @@
+{
+    "config": {
+        "volume": {
+            "music": 0.8,
+            "sounds": 1,
+            "footstep": 1
+        }
+    },
+    "player": {
+        "footstep": true,
+        "footstep_delay": 20,
+        "footstep_time": 0
+    }
+}
