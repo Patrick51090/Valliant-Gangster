@@ -16,12 +16,16 @@ class PreloadScene extends Phaser.Scene {
         //Images
         this.load.image('img-bg-menu', ['assets/images/backgrounds/menu-bg.png', 'assets/images/backgrounds/menu-bg.png']);
 
+
+
         this.load.image('img-btn1-none', 'assets/images/btn1-none.png');
         this.load.image('img-btn1-hover', 'assets/images/btn1-hover.png');
         this.load.image('img-btn2-none', 'assets/images/btn2-none.png');
         this.load.image('img-btn2-hover', 'assets/images/btn2-hover.png');
 
         this.load.image('img-icons-author', 'assets/images/icons/author.png');
+
+        this.load.spritesheet('img-player', 'assets/images/player.png', { frameWidth: 24, frameHeight: 32 });
 
         this.load.image('img-text-field-large-none', 'assets/images/text-field-large-none.png');
         this.load.image('img-text-field-large-active', 'assets/images/text-field-large-active.png');
@@ -55,8 +59,8 @@ class PreloadScene extends Phaser.Scene {
 
 
         //Scripts
-        this.load.script('js-text-field', 'assets/scripts/TextField.js');
-
+        this.load.script('js-player-animations', 'assets/scripts/PlayerAnimations.js');
+        this.load.script('js-player-movement', 'assets/scripts/PlayerMovement.js');
 
 
 
@@ -65,8 +69,8 @@ class PreloadScene extends Phaser.Scene {
 
         //Fonts (.png & .fnt)
 		this.load.bitmapFont('fnt-pixel', 'assets/fonts/font.png', 'assets/fonts/font.fnt');
-
-
+        this.load.bitmapFont('fnt-title', 'assets/fonts/title.png', 'assets/fonts/title.fnt');
+        this.load.bitmapFont('fnt-bold', 'assets/fonts/bold.png', 'assets/fonts/bold.fnt');
 
 
 
@@ -78,6 +82,11 @@ class PreloadScene extends Phaser.Scene {
 
 
     create() {
-        this.scene.start('MenuScene');
+
+        if (gameConfig.physics.arcade.debug) {
+            this.scene.start('MainWorld');
+        }else {
+            this.scene.start('MenuScene');
+        }
     }
 }

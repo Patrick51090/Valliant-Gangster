@@ -22,7 +22,8 @@ class MenuScene extends Phaser.Scene {
         this.title.bg = this.add.sprite(400, 300, 'img-bg-menu').setOrigin(0.5);
 
 
-        this.title.label = this.add.bitmapText(400, 100, 'fnt-pixel', "Valiant Wizard", 56).setOrigin(0.5);
+        this.title.label = this.add.bitmapText(400, 100, 'fnt-title', "Valiant Wizard", 72).setOrigin(0.5);
+        this.title.label.tint = 0x000000;
 
 
 
@@ -31,7 +32,7 @@ class MenuScene extends Phaser.Scene {
 
         //Play Btn
         this.btn1 = this.add.sprite(400, 450, 'img-btn1-none').setOrigin(0.5).setInteractive();
-        this.btn1.label = this.add.bitmapText(400, 445, "fnt-pixel", "Play Game", 24).setOrigin(0.5);
+        this.btn1.label = this.add.bitmapText(400, 445, "fnt-bold", "Play Game", 26).setOrigin(0.5);
 
 
 
@@ -70,8 +71,8 @@ class MenuScene extends Phaser.Scene {
 
         //Load Game
         //Play Btn
-        this.btn2 = this.add.sprite(400, 550, 'img-btn2-none').setOrigin(0.5).setInteractive();
-        this.btn2.label = this.add.bitmapText(400, 545, "fnt-pixel", "Load Game", 24).setOrigin(0.5);
+        this.btn2 = this.add.sprite(400, 530, 'img-btn2-none').setOrigin(0.5).setVisible(false);
+        this.btn2.label = this.add.bitmapText(400, 525, "fnt-bold", "Load Game", 26).setOrigin(0.5).setVisible(false);
 
 
 
