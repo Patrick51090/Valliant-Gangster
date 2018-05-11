@@ -4,7 +4,7 @@ class FootstepAudio {
     static Grass() {
         if (this.player.config.footstep) {
             var sound = this.sound.add('sfx-fs-grass');
-            //sound.volume = GameData.config.volume.footsteps;
+            sound.volume = GameData.config.volume.footsteps;
             sound.play();
 
             this.player.config.footstep = false;
@@ -16,7 +16,7 @@ class FootstepAudio {
     static Sand() {
         if (this.player.config.footstep) {
             var sound = this.sound.add('sfx-fs-sand');
-            //sound.volume = GameData.config.volume.footsteps;
+            sound.volume = GameData.config.volume.footsteps;
             sound.play();
 
             this.player.config.footstep = false;
@@ -28,7 +28,7 @@ class FootstepAudio {
     static Stone() {
         if (this.player.config.footstep) {
             var sound = this.sound.add('sfx-fs-stone');
-            //sound.volume = GameData.config.volume.footsteps;
+            sound.volume = GameData.config.volume.footsteps;
             sound.play();
 
             this.player.config.footstep = false;

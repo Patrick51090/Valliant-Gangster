@@ -3,7 +3,7 @@
         "volume": {
             "music": 0.8,
             "sounds": 1,
-            "footstep": 1
+            "footsteps": 1
         }
     },
     "player": {

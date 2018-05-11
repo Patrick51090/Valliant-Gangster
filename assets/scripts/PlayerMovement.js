@@ -25,26 +25,26 @@ class PlayerMovement {
 
         if (this.controls.up.isDown && this.controls.down.isUp && this.controls.left.isDown && this.controls.right.isUp) {
             this.scene.player.anims.play('player.walk.left', true);
-            this.scene.player.body.y -= 2;
-            this.scene.player.body.x -= 2;
+            this.scene.player.body.y -= 1;
+            this.scene.player.body.x -= 1;
         }
 
         if (this.controls.up.isDown && this.controls.down.isUp && this.controls.left.isUp && this.controls.right.isDown) {
             this.scene.player.anims.play('player.walk.right', true);
-            this.scene.player.body.y -= 2;
-            this.scene.player.body.x += 2;
+            this.scene.player.body.y -= 1;
+            this.scene.player.body.x += 1;
         }
 
         if (this.controls.up.isUp && this.controls.down.isDown && this.controls.left.isDown && this.controls.right.isUp) {
             this.scene.player.anims.play('player.walk.left', true);
-            this.scene.player.body.x -= 2;
-            this.scene.player.body.y += 2;
+            this.scene.player.body.x -= 1;
+            this.scene.player.body.y += 1;
         }
 
         if (this.controls.up.isUp && this.controls.down.isDown && this.controls.left.isUp && this.controls.right.isDown) {
             this.scene.player.anims.play('player.walk.right', true);
-            this.scene.player.body.x += 2;
-            this.scene.player.body.y += 2;
+            this.scene.player.body.x += 1;
+            this.scene.player.body.y += 1;
         }
 
         if (this.controls.up.isDown && this.controls.down.isUp && this.controls.left.isUp && this.controls.right.isUp) {
