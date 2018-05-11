@@ -63,6 +63,7 @@ class PreloadScene extends Phaser.Scene {
         this.load.script('js-animations', 'assets/scripts/Animations.js');
         this.load.script('js-player-movement', 'assets/scripts/PlayerMovement.js');
         this.load.script('js-footstep-audio', 'assets/scripts/FootstepAudio.js');
+        this.load.script('js-bag', 'assets/scripts/Bag.js');
 
 
 
@@ -79,6 +80,7 @@ class PreloadScene extends Phaser.Scene {
 
         //Data
         this.load.json('json-game-data', 'assets/data/GameData.json');
+        this.load.json('json-items', 'assets/data/Items.json');
 
         this.load.tilemapTiledJSON('maps-main-world', 'assets/data/maps/main_world.json');
 

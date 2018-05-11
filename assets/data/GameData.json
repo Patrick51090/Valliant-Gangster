@@ -1,9 +1,9 @@
 {
     "config": {
         "volume": {
-            "music": 0.8,
+            "music": 0.6,
             "sounds": 1,
-            "footsteps": 1
+            "footsteps": 1.2
         }
     },
     "player": {

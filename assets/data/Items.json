@@ -1,0 +1,15 @@
+{
+    "wood": {
+        "id": 0,
+        "name": "Wood",
+        "type": "resource",
+        "buy_price": 4,
+        "sell_price": 2
+    },
+    "mushroom": {
+        "id": 1,
+        "name": "Mushroom",
+        "buy_price": 6,
+        "sell_price": 1
+    }
+}

@@ -7,8 +7,10 @@ class MainWorldScene extends Phaser.Scene {
 
     init() {
         this.animations = new Animations(this);
-        //this.footstep_audio = new FootstepAudio();
+
         this.player_movement = new PlayerMovement(this);
+
+        this.bag = new Bag(this);
     }
 
 
