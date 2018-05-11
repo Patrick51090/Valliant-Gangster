@@ -32,6 +32,8 @@ class PreloadScene extends Phaser.Scene {
 
         this.load.image('img-ground_tiles', 'assets/images/ground_tiles.png');
 
+        this.load.image('img-menu-bag', 'assets/images/menu-bag.png');
+
 
 
 
@@ -65,6 +67,8 @@ class PreloadScene extends Phaser.Scene {
         this.load.script('js-footstep-audio', 'assets/scripts/FootstepAudio.js');
         this.load.script('js-bag', 'assets/scripts/Bag.js');
         this.load.script('js-controls', 'assets/scripts/Controls.js');
+        this.load.script('js-entity', 'assets/scripts/Entity.js');
+
 
 
 
@@ -82,6 +86,8 @@ class PreloadScene extends Phaser.Scene {
         //Data
         this.load.json('json-game-data', 'assets/data/GameData.json');
         this.load.json('json-items', 'assets/data/Items.json');
+        this.load.json('json-entities', 'assets/data/Entities.json');
+        this.load.json('json-player', 'assets/data/Player.json');
 
         this.load.tilemapTiledJSON('maps-main-world', 'assets/data/maps/main_world.json');
 
@@ -91,6 +97,7 @@ class PreloadScene extends Phaser.Scene {
     create() {
 
         GameData = this.cache.json.get('json-game-data');
+        console.log(GameData);
 
         if (gameConfig.physics.arcade.debug) {
             this.scene.start('MainWorld');

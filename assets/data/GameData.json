@@ -5,10 +5,5 @@
             "sounds": 1,
             "footsteps": 1.2
         }
-    },
-    "player": {
-        "footstep": true,
-        "footstep_delay": 20,
-        "footstep_time": 0
     }
 }

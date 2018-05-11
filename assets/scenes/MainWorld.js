@@ -18,8 +18,6 @@ class MainWorldScene extends Phaser.Scene {
 
     create() {
 
-        this.player_movement = new PlayerMovement(this);
-
         this.bg_music = this.sound.add('track-loop2');
         this.bg_music.volume = GameData.config.volume.music;
         this.bg_music.loop = true;
@@ -38,7 +36,7 @@ class MainWorldScene extends Phaser.Scene {
 
 
         this.player = this.physics.add.sprite(32, 32, 'img-player', 0).setCollideWorldBounds(true);
-        this.player.config = GameData.player;
+        this.player.config = this.cache.json.get('json-player');
         this.player.body.fixedRotation = true;
 
         this.player_movement = new PlayerMovement(this, this.player);
@@ -84,5 +82,7 @@ class MainWorldScene extends Phaser.Scene {
 
     update() {
         this.player_movement.update();
+
+        this.bag.update();
     }
 }

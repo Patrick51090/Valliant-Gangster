@@ -1,0 +1,10 @@
+{
+    "startX": 512,
+    "startY": 512,
+    "max_health": 500,
+    "health": 500,
+    "speed": 2,
+    "footstep": false,
+    "footstep_delay": 20,
+    "footstep_time": 0
+}
