@@ -6,9 +6,10 @@ class MainWorldScene extends Phaser.Scene {
 
 
     init() {
-        this.animations = new Animations(this);
 
-        this.player_movement = new PlayerMovement(this);
+        this.controls = new Controls(this);
+
+        this.animations = new Animations(this);
 
         this.bag = new Bag(this);
     }
@@ -16,6 +17,8 @@ class MainWorldScene extends Phaser.Scene {
 
 
     create() {
+
+        this.player_movement = new PlayerMovement(this);
 
         this.bg_music = this.sound.add('track-loop2');
         this.bg_music.volume = GameData.config.volume.music;

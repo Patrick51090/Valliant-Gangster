@@ -64,6 +64,7 @@ class PreloadScene extends Phaser.Scene {
         this.load.script('js-player-movement', 'assets/scripts/PlayerMovement.js');
         this.load.script('js-footstep-audio', 'assets/scripts/FootstepAudio.js');
         this.load.script('js-bag', 'assets/scripts/Bag.js');
+        this.load.script('js-controls', 'assets/scripts/Controls.js');
 
 
 
