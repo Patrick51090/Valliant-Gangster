@@ -6,6 +6,12 @@ class PlayerMovement {
 
     update() {
         this.scene.player.body.setVelocity(0);
+        this.scene.player.setDepth(this.scene.player.body.y + (this.scene.player.height / 2));
+
+        if (!this.scene.player.config.ableToMove) {
+            return;
+        }
+
 
         if (this.scene.controls.up.isDown || this.scene.controls.down.isDown || this.scene.controls.left.isDown || this.scene.controls.right.isDown) {
             if (this.scene.player.config.footstep_time >= this.scene.player.config.footstep_delay) {

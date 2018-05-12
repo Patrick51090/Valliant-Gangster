@@ -1,9 +1,10 @@
-[
-    {
+{
+    "ghost": {
         "id": 0,
         "name": "Ghost",
         "type": "enemy",
         "health": 100,
-        "level": 2
+        "level": 2,
+        "ableToMove": true
     }
-]
+}

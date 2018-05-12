@@ -45,6 +45,23 @@ class MainWorldScene extends Phaser.Scene {
 
 
 
+        this.ghosts = this.physics.add.group({
+            classType: Ghost,
+            maxSize: 5,
+            runChildUpdates: true
+        });
+
+
+
+
+        this.physics.add.overlap(this.player, this.ghosts, BattleMech.Fight.bind(this));
+
+
+
+
+
+
+
 
 
 
@@ -84,5 +101,13 @@ class MainWorldScene extends Phaser.Scene {
         this.player_movement.update();
 
         this.bag.update();
+
+
+
+        var ghosts = this.ghosts.get();
+
+        if (ghosts) {
+            ghosts.generate();
+        }
     }
 }

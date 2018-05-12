@@ -27,12 +27,17 @@ class PreloadScene extends Phaser.Scene {
 
         this.load.spritesheet('img-player', 'assets/images/player.png', { frameWidth: 24, frameHeight: 32 });
 
+        this.load.spritesheet('img-entity-ghost01', 'assets/images/entity/ghost01.png', { frameWidth: 24, frameHeight: 32 });
+
         this.load.image('img-text-field-large-none', 'assets/images/text-field-large-none.png');
         this.load.image('img-text-field-large-active', 'assets/images/text-field-large-active.png');
 
         this.load.image('img-ground_tiles', 'assets/images/ground_tiles.png');
 
         this.load.image('img-menu-bag', 'assets/images/menu-bag.png');
+
+        this.load.image('img-battle-area', 'assets/images/battle/area.png');
+        this.load.image('img-battle-circle', 'assets/images/battle/circle.png');
 
 
 
@@ -67,7 +72,10 @@ class PreloadScene extends Phaser.Scene {
         this.load.script('js-footstep-audio', 'assets/scripts/FootstepAudio.js');
         this.load.script('js-bag', 'assets/scripts/Bag.js');
         this.load.script('js-controls', 'assets/scripts/Controls.js');
-        this.load.script('js-entity', 'assets/scripts/Entity.js');
+
+        this.load.script('js-ghost', 'assets/scripts/Ghost.js');
+
+        this.load.script('js-battle-mech', 'assets/scripts/BattleMech.js');
 
 
 
@@ -88,6 +96,7 @@ class PreloadScene extends Phaser.Scene {
         this.load.json('json-items', 'assets/data/Items.json');
         this.load.json('json-entities', 'assets/data/Entities.json');
         this.load.json('json-player', 'assets/data/Player.json');
+        this.load.json('json-cards', 'assets/data/Cards.json');
 
         this.load.tilemapTiledJSON('maps-main-world', 'assets/data/maps/main_world.json');
 
@@ -97,7 +106,6 @@ class PreloadScene extends Phaser.Scene {
     create() {
 
         GameData = this.cache.json.get('json-game-data');
-        console.log(GameData);
 
         if (gameConfig.physics.arcade.debug) {
             this.scene.start('MainWorld');

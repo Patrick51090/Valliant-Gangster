@@ -4,6 +4,7 @@ class Bag {
         this.scene = scene;
 
         this.items = this.scene.cache.json.get('json-items');
+        this.cards = this.scene.cache.json.get('json-cards');
 
         for (var i in this.items) {
             this.items[i].count = 0;
